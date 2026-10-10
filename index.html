@@ -1,0 +1,153 @@
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulir Pendaftaran Mahasiswa Baru</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <h2>FORMULIR PENDAFTARAN MAHASISWA BARU</h2>
+            
+            <form id="form-pendaftaran" novalidate>
+                
+                <div class="form-group">
+                    <label for="nama">1. Nama Lengkap (sesuai STTB/STK):</label>
+                    <input type="text" id="nama" required minlength="3" maxlength="50" placeholder="Masukkan nama lengkap">
+                    <span class="pesan-error" id="error-nama"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>2. Jenis Kelamin:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="jenis_kelamin" value="Perempuan" required> Perempuan</label>
+                        <label><input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki</label>
+                    </div>
+                    <span class="pesan-error" id="error-jk"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>3. Status:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="status" value="Belum Menikah" required> Belum Menikah</label>
+                        <label><input type="radio" name="status" value="Menikah"> Menikah</label>
+                        <label><input type="radio" name="status" value="Biarawan/Biarawati"> Biarawan/Biarawati</label>
+                    </div>
+                    <span class="pesan-error" id="error-status"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>4. Agama:</label>
+                    <div class="radio-group grid-agama">
+                        <label><input type="radio" name="agama" value="Islam" required> Islam</label>
+                        <label><input type="radio" name="agama" value="Katolik"> Katolik</label>
+                        <label><input type="radio" name="agama" value="Kristen"> Kristen</label>
+                        <label><input type="radio" name="agama" value="Budha"> Budha</label>
+                        <label><input type="radio" name="agama" value="Hindu"> Hindu</label>
+                        <label><input type="radio" name="agama" value="Lain-lain"> Lain-lain</label>
+                    </div>
+                    <span class="pesan-error" id="error-agama"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>5. Kewarganegaraan:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="kewarganegaraan" value="WNI" required> WNI</label>
+                        <label><input type="radio" name="kewarganegaraan" value="WNA"> WNA</label>
+                    </div>
+                    <span class="pesan-error" id="error-kewarganegaraan"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat_surat">6. Alamat Surat:</label>
+                    <textarea id="alamat_surat" required minlength="10" placeholder="Alamat yang mudah dijangkau oleh Pos"></textarea>
+                    <span class="pesan-error" id="error-alamat-surat"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat_asal">7. Alamat Asal:</label>
+                    <textarea id="alamat_asal" required minlength="10" placeholder="Alamat asal tempat tinggal"></textarea>
+                    <span class="pesan-error" id="error-alamat-asal"></span>
+                </div>
+                <div class="form-group">
+                    <label for="kabupaten">Kabupaten/Kota:</label>
+                    <input type="text" id="kabupaten" required placeholder="Contoh: Sleman / Yogyakarta">
+                    <span class="pesan-error" id="error-kabupaten"></span>
+                </div>
+                <div class="form-group">
+                    <label for="propinsi">Propinsi:</label>
+                    <input type="text" id="propinsi" required placeholder="Contoh: D.I. Yogyakarta">
+                    <span class="pesan-error" id="error-propinsi"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telepon">8. No. Telepon Rumah / HP:</label>
+                    <input type="tel" id="telepon" required pattern="[0-9]{10,13}" placeholder="Contoh: 081234567890">
+                    <span class="pesan-error" id="error-telepon"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">9. Alamat E-mail:</label>
+                    <input type="email" id="email" required placeholder="nama@email.com">
+                    <span class="pesan-error" id="error-email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="ortu">10. Nama Orang Tua / Wali:</label>
+                    <input type="text" id="ortu" required placeholder="Nama lengkap orang tua/wali">
+                    <span class="pesan-error" id="error-ortu"></span>
+                </div>
+                <div class="form-group">
+                    <label>Tingkat Pendidikan Orang Tua:</label>
+                    <div class="radio-group grid-pendidikan">
+                        <label><input type="radio" name="pendidikan_ortu" value="Tidak lulus SD" required> Tidak lulus SD</label>
+                        <label><input type="radio" name="pendidikan_ortu" value="SD"> SD</label>
+                        <label><input type="radio" name="pendidikan_ortu" value="SLTP"> SLTP</label>
+                        <label><input type="radio" name="pendidikan_ortu" value="SMA"> SMA</label>
+                        <label><input type="radio" name="pendidikan_ortu" value="Diploma"> Diploma</label>
+                        <label><input type="radio" name="pendidikan_ortu" value="Sarjana Muda"> Sarjana Muda</label>
+                        <label><input type="radio" name="pendidikan_ortu" value="Sarjana"> Sarjana</label>
+                        <label><input type="radio" name="pendidikan_ortu" value="Magister"> Magister</label>
+                        <label><input type="radio" name="pendidikan_ortu" value="Doktor"> Doktor</label>
+                    </div>
+                    <span class="pesan-error" id="error-pendidikan"></span>
+                </div>
+
+                <fieldset class="fieldset-transfer">
+                    <legend>11. Khusus Mahasiswa Transfer</legend>
+                    <div class="form-group">
+                        <label for="asal_pt">a. Asal Perguruan Tinggi:</label>
+                        <input type="text" id="asal_pt" placeholder="Nama Perguruan Tinggi asal">
+                    </div>
+                    <div class="form-group">
+                        <label for="asal_prodi">b. Asal Program Studi:</label>
+                        <input type="text" id="asal_prodi" placeholder="Program studi asal">
+                    </div>
+                    <div class="form-group">
+                        <label>c. Status Akreditasi:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="status_transfer" value="Terakreditasi"> Terakreditasi</label>
+                            <label><input type="radio" name="status_transfer" value="Belum Terakreditasi"> Belum Terakreditasi</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="password">Password Akun:</label>
+                    <input type="password" id="password" required minlength="8" placeholder="Minimal 8 karakter">
+                    <span class="pesan-error" id="error-password"></span>
+                </div>
+                <div class="form-group">
+                    <label for="konfirmasi">Konfirmasi Password:</label>
+                    <input type="password" id="konfirmasi" required placeholder="Ulangi password">
+                    <span class="pesan-error" id="error-konfirmasi"></span>
+                </div>
+
+                <button type="submit">Kirim Pendaftaran</button>
+            </form>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
